@@ -8,4 +8,4 @@ MIN SPEC
 
 Commands:
 
-curl -O https://raw.githubusercontent.com/Alexjptz/Blockmesh-node/main/blockmesh_node.sh && chmod +x blockmesh_node.sh && ./blockmesh_node.sh
+cd $HOME && curl -O https://raw.githubusercontent.com/Alexjptz/Blockmesh-node/main/blockmesh_node.sh && chmod +x blockmesh_node.sh && ./blockmesh_node.sh && rm blockmesh_node.sh

@@ -212,7 +212,8 @@ while true; do
         4)
             # Delete
             process_notification "Удаляем ноду (Deleting node)"
-            stop_delete_service "blockmesh"
+            echo
+            run_commands "stop_delete_service blockmesh"
 
             process_notification "Удаляем файлы (Deleting Files)..."
             run_commands "rm -rvf $HOME/blockmesh"
