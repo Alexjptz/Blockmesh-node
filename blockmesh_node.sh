@@ -87,8 +87,8 @@ run_node_command() {
 }
 
 create_service() {
-    local EMAIL="$1"
-    local PASSWORD="$2"
+    local EMAIL=$1
+    local PASSWORD=$2
     sudo tee /etc/systemd/system/blockmesh.service > /dev/null << EOF
 [Unit]
 Description=BlockMesh CLI Service
