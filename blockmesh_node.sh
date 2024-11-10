@@ -87,8 +87,8 @@ run_node_command() {
 }
 
 create_service() {
-    local EMAIL="s1"
-    local PASSWORD="s2"
+    local EMAIL="$1"
+    local PASSWORD="$2"
     sudo tee /etc/systemd/system/blockmesh.service > /dev/null << EOF
 [Unit]
 Description=BlockMesh CLI Service
@@ -96,7 +96,7 @@ After=network.target
 
 [Service]
 User=$USER
-ExecStart=$INSTALLATION_PATH/target/x86_64-unknown-linux-gnu/release/blockmesh-cli login --email $EMAIL --password $PASSWORD
+ExecStart=$INSTALLATION_PATH/target/x86_64-unknown-linux-gnu/release/blockmesh-cli login --email "$EMAIL" --password $PASSWORD"
 WorkingDirectory=$INSTALLATION_PATH/target/x86_64-unknown-linux-gnu/release
 Restart=on-failure
 
